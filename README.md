@@ -26,7 +26,7 @@ The DM's, e-mails and calls gave me enough context to be able to build it.
 ## TODO
 - bespoke delivery mechanism, module concatenation-deconcatenation for delivery.
 - Leverage service workers to intercept and stream code directly into a browser cache.
-- Stream multiple requests are one file but cache each request with its corresponding code. 
+- Stream multiple requests as one file but cache each request with its corresponding code. 1 request = 5 cached modules
 - Create chunk graph interface. Teach webpack to preload next routes. 
 - Create an interface for asking or injecting chunks by name (`react`,`lodash`)
 - Allow SSR without babel loaders or resolveWeak. (hopefully)
