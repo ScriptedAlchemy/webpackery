@@ -1,12 +1,14 @@
 # webpackery
 Webpack 4 Orchestration Layer allows for automated async code splitting of anything
+*Webpack is an amazing crutch while I build a sophisicated architecture - This Orchastration layer will soon be completely standalone & plug-n-play with with other budlers* 
 
 I want to prepare for HTTP 2 server push. To do so, I'll use Webpack and play a series of tricks on it. Hate on Webpack if you want. Ill love and respect it always <3. So Webpack is the catalyst for this architecture, The idea is to make a robust infrastructure which could one day be swapped out with another build underlayer.
 
 For the time being, It'll stay Webpack only. 
 
 *This has been months of obsessing*
-Made with love <3
+Made with love <3 
+Welcome to the *Unbundling* 
 
 **Big thanks to FaceySpacey and React-Static** 
 The DM's, e-mails and calls gave me enough context to be able to build it. 
