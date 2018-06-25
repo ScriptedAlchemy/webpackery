@@ -1,13 +1,16 @@
 module.exports = {
     plugins: {
-        'autoprefixer': {browsers: ['last 4 versions', 'Safari >= 7', 'Firefox ESR', 'not ie < 9'], flexbox: true},
+        autoprefixer: {
+            browsers: ['last 4 versions', 'Safari >= 7', 'Firefox ESR', 'not ie < 9'],
+            flexbox: true,
+        },
         'postcss-import': {},
         'postcss-flexbugs-fixes': {},
-        'cssnano': {
+        cssnano: {
             safe: true,
             autoprefixer: true,
             discardComments: {
-                removeAll: true
+                removeAll: true,
             },
             calc: true,
             colormin: true,
@@ -37,7 +40,7 @@ module.exports = {
             reduceTransforms: true,
             svgo: false,
             uniqueSelectors: true,
-            zindex: true
-        }
-    }
+            zindex: true,
+        },
+    },
 };

@@ -5,8 +5,8 @@ const config = merge.smart(baseConfig, {
     mode: 'production',
     devtool: 'source-map',
     output: {
-        filename: 'bundle.[hash:8].js'
-    }
+        filename: 'bundle.[hash:8].js',
+    },
 });
 
 module.exports = config;

@@ -1,14 +1,14 @@
 const path = require('path');
 const paths = require('../paths');
-const {client: clientLoaders} = require('./loaders');
+const { client: clientLoaders } = require('./loaders');
 const plugins = require('./plugins');
-const common = require('./common.base')
-const merge = require('webpack-merge')
+const common = require('./common.base');
+const merge = require('webpack-merge');
 
 module.exports = merge.smart(common, {
     name: 'client',
     target: 'web',
-    entry:  [path.resolve(__dirname, '../../src/client/index.js')],
+    entry: [path.resolve(__dirname, '../../src/client/index.js')],
     output: {
         path: path.join(paths.clientBuild, paths.publicPath),
         filename: 'bundle.js',
@@ -40,15 +40,15 @@ module.exports = merge.smart(common, {
         },
     },
     stats: {
-        cached: false,
-        cachedAssets: false,
-        chunks: false,
-        chunkModules: false,
-        colors: true,
-        hash: false,
-        modules: false,
-        reasons: false,
-        timings: true,
-        version: false,
+        // cached: false,
+        // cachedAssets: false,
+        // chunks: false,
+        // chunkModules: false,
+        // colors: true,
+        // hash: false,
+        // modules: false,
+        // reasons: false,
+        // timings: true,
+        // version: false,
     },
-})
+});

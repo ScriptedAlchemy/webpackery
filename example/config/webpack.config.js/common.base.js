@@ -6,7 +6,7 @@ const paths = require('../paths');
 module.exports = {
     target: 'web',
 
-    entry:  ['@babel/polyfill'],
+    entry: ['@babel/polyfill'],
 
     output: {
         path: path.join(paths.clientBuild, paths.publicPath),
@@ -18,18 +18,16 @@ module.exports = {
     resolve: { ...resolvers },
 
     plugins: plugins.shared,
-
-    stats: {
-        cached: false,
-        cachedAssets: false,
-        chunks: false,
-        chunkModules: false,
-        colors: true,
-        hash: false,
-        modules: false,
-        reasons: false,
-        timings: true,
-        version: false,
-    },
-}
-
+    // stats: {
+    //     cached: false,
+    //     cachedAssets: false,
+    //     chunks: false,
+    //     chunkModules: false,
+    //     colors: true,
+    //     hash: false,
+    //     modules: false,
+    //     reasons: false,
+    //     timings: true,
+    //     version: false,
+    // },
+};

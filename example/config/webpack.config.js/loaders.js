@@ -16,19 +16,18 @@ const baseStyleLoader = (initialLoaders) => ({
             loader: 'postcss-loader',
             options: {
                 config: {
-                    path: path.join(__dirname, 'postcss.config.js')
-                }
-            }
+                    path: path.join(__dirname, 'postcss.config.js'),
+                },
+            },
         },
         {
             loader: 'sass-loader',
             options: {
-                importLoaders: 1
-            }
+                importLoaders: 1,
+            },
         },
-    ]
-})
-
+    ],
+});
 
 const cssLoaderClient = baseStyleLoader([
     ExtractCSSChunks.loader,
@@ -42,7 +41,7 @@ const cssLoaderClient = baseStyleLoader([
             localIdentName: '[name]__[local]--[hash:base64:5]',
         },
     },
-])
+]);
 
 const cssLoaderServer = baseStyleLoader([
     {
@@ -54,7 +53,7 @@ const cssLoaderServer = baseStyleLoader([
             localIdentName: '[name]__[local]--[hash:base64:5]',
         },
     },
-])
+]);
 
 const urlLoaderClient = {
     test: /\.(png|jpe?g|gif|svg)$/,
