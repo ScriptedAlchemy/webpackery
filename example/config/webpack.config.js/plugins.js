@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const ExtractCSSChunks = require('extract-css-chunks-webpack-plugin');
 
 const env = require('../env')();
@@ -19,7 +18,6 @@ const client = [
             process.env.NODE_ENV === 'development' ? '[id].css' : '[id].[contenthash].css',
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new ManifestPlugin({ fileName: 'manifest.json' }),
 ];
 
 const server = [

@@ -8,6 +8,8 @@ import { configureStore } from '../shared/store';
 import serverRender from './render';
 import paths from '../../config/paths';
 
+const fs = require('fs');
+
 require('dotenv').config();
 
 const app = express();
@@ -27,6 +29,13 @@ app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     req.store = configureStore();
+    return next();
+});
+
+app.use((req, res, next) => {
+    // props should just pass it into serverRender - but i like the middleware idea
+    // lets see how much drag it adds
+    req.clientStats = JSON.parse(fs.readFileSync(paths.serverBuild + '/manifest.json', 'utf8'));
     return next();
 });
 
@@ -63,7 +72,4 @@ app.listen(process.env.PORT || 8500, () => {
     );
 });
 
-export default (a) => {
-    console.log(a);
-    return app;
-};
+export default app;

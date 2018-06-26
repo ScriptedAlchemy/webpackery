@@ -10,7 +10,6 @@ module.exports = merge.smart(common, {
     target: 'web',
     entry: [path.resolve(__dirname, '../../src/client/index.js')],
     output: {
-        path: path.join(paths.clientBuild, paths.publicPath),
         filename: 'bundle.js',
         publicPath: paths.publicPath,
     },

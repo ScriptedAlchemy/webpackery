@@ -1,4 +1,3 @@
-const path = require('path');
 const plugins = require('./plugins');
 const resolvers = require('./resolvers');
 const paths = require('../paths');
@@ -9,7 +8,7 @@ module.exports = {
     entry: ['@babel/polyfill'],
 
     output: {
-        path: path.join(paths.clientBuild, paths.publicPath),
+        // path: path.join(paths.clientBuild, paths.publicPath),
         filename: '[name].js',
         publicPath: paths.publicPath,
         chunkFilename: '[name].chunk.js',
@@ -18,16 +17,5 @@ module.exports = {
     resolve: { ...resolvers },
 
     plugins: plugins.shared,
-    // stats: {
-    //     cached: false,
-    //     cachedAssets: false,
-    //     chunks: false,
-    //     chunkModules: false,
-    //     colors: true,
-    //     hash: false,
-    //     modules: false,
-    //     reasons: false,
-    //     timings: true,
-    //     version: false,
-    // },
+    stats: 'normal',
 };
