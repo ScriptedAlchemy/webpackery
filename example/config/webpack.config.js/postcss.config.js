@@ -1,4 +1,5 @@
 module.exports = {
+    sourcemaps:true,
     plugins: {
         autoprefixer: {
             browsers: ['last 4 versions', 'Safari >= 7', 'Firefox ESR', 'not ie < 9'],
