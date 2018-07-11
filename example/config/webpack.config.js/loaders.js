@@ -23,9 +23,15 @@ const baseStyleLoader = (initialLoaders) => ({
         {
             loader: 'sass-loader',
             options: {
-                importLoaders: 1,
-            },
+                importLoaders: 2
+            }
         },
+        {
+            loader: 'sass-resources-loader',
+            options: {
+                resources: path.join(__dirname, '../../src/shared/variables.scss')
+            }
+        }
     ],
 });
 
@@ -34,12 +40,12 @@ const cssLoaderClient = baseStyleLoader([
     {
         loader: 'css-loader',
         options: {
-            camelCase: true,
-            modules: true,
-            importLoaders: 1,
+            minimize: true,
             sourceMap: true,
-            localIdentName: '[name]__[local]--[hash:base64:5]',
-        },
+            modules: true,
+            importLoaders: 2,
+            localIdentName: '[name]__[local]--[hash:base64:5]'
+        }
     },
 ]);
 

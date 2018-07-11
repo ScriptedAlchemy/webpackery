@@ -27,7 +27,7 @@ module.exports = merge.smart(common, {
     optimization: {
         namedModules: true,
         noEmitOnErrors: true,
-        // concatenateModules: true,
+        concatenateModules: true,
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -38,16 +38,5 @@ module.exports = merge.smart(common, {
             },
         },
     },
-    stats: {
-        // cached: false,
-        // cachedAssets: false,
-        // chunks: false,
-        // chunkModules: false,
-        // colors: true,
-        // hash: false,
-        // modules: false,
-        // reasons: false,
-        // timings: true,
-        // version: false,
-    },
+
 });
