@@ -90,7 +90,7 @@
     "postcss-normalize": "^4.0.0",
     "prettier": "^1.12.1",
     "react": "^16.4.0",
-    "react-dev-utils": "^5.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
     "react-i18next": "^7.6.1",
